@@ -1,0 +1,161 @@
+.full-screen-product-conatiner {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  top: 0;
+  right: 0;
+  z-index: 10000000;
+  background-color: #000000d7;
+  animation: fadeIn 1s both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.small-product-conatiner {
+  background-color: white;
+  height: 606px;
+  max-height: 80%;
+  width: 1301px;
+  max-width: 70%;
+  position: relative;
+  display: flex;
+  padding: 3vw;
+}
+
+.image-campaign {
+  width: 300px;
+  max-width: 350px;
+}
+
+#primisPlayerContainerDiv {
+  width: 600px !important;
+}
+
+.right-area {
+  width: 30%;
+  opacity: 0;
+  padding: 2vw;
+}
+
+.left-area {
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+  overflow: auto;
+  position: relative;
+}
+
+.bars-area {
+  height: 95px;
+}
+
+.bars-area span {
+  display: none;
+}
+
+.bar-title {
+  position: relative;
+  direction: rtl;
+  text-transform: uppercase;
+  top: 2vw;
+}
+
+.type-title {
+  direction: rtl;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.campaign-name-area {
+  direction: rtl;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.titlesInRightArea {
+  display: flex;
+  direction: rtl;
+}
+
+.grid-product {
+  column-count: 2;
+  grid-column-gap: 0;
+  column-gap: 0;
+  height: auto;
+  width: 600px;
+}
+
+.product-img1 {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: auto;
+  max-width: 59%;
+  left: 86px;
+}
+.product-img2 {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: auto;
+  max-width: 59%;
+  right: 0;
+}
+
+.product-img3 {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  width: auto;
+  max-width: 59%;
+  left: 86px;
+}
+
+.product-rate {
+  width: 6vw;
+  height: 3vw;
+  border-radius: 30px;
+  background-color: #ffdb48;
+  margin: 1vw;
+  font-size: 2vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-product-pop-up-btn {
+  width: 1.9vw;
+  height: 1.9vw;
+  margin: 1vw;
+  position: absolute;
+  left: 1vw;
+  top: 1vw;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  outline: none;
+  border: 2px solid black;
+}
+
+.close-product-pop-up-btn:hover {
+  cursor: pointer;
+  background-color: #f84a72;
+  border: 2px solid #f84a72;
+  color: white;
+}

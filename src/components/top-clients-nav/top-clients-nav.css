@@ -1,0 +1,373 @@
+.top-companies-nav {
+  height: 7vw;
+  position: fixed;
+  margin: 0;
+  width: 88%;
+  display: flex;
+  direction: rtl;
+  z-index: 999;
+  background-color: white;
+  left: 4.8vw;
+  align-items: center;
+  animation: slideDown 0.6s both;
+  animation-delay: 0.6s;
+}
+
+@keyframes slideDown {
+  0%{
+    top: -50px;
+  }
+  25%{
+    top: -20px;
+  }
+  100%{
+    top: 0;
+  }
+}
+
+
+.mobile .top-companies-nav{
+  height: 22vw;
+}
+
+
+.no-selected-button {
+  background-color: transparent;
+  width: 3.8vw;
+  height: 3.8vw;
+  border-radius: 100%;
+  outline: none;
+  color: #a2a1a1;
+  border: 2.8px solid #c8c8c8;
+  margin: 1vw;
+  font-size: 2.3vw;
+}
+
+.next-btn-pink {
+  width: 52px;
+}
+
+
+
+.mobile .logo {
+  animation: zoomOutMobile 1s both;
+  animation-delay: 0.7s;
+}
+
+.logo-container{
+  background-color: white;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 999;
+  animation: disappear 1s both;
+  animation-delay: 0.7s;
+}
+
+.logout-dialog{
+  box-shadow: 0px 5px 19px -9px rgba(0,0,0,0.75);
+  position: fixed;
+  left: 4vw;
+  top: 7vw;
+  height: 6vw;
+  width: 23vw;
+  text-align: center;
+  padding: 1vw;
+  background-color: white;
+}
+
+.logout-subtitle{
+  font-size: 0.8vw;
+}
+
+.logout-cancel-btn,
+.logout-confirm-btn{
+  margin: 0.5vw;
+  border: 1px solid black;
+  background-color: white;
+  width: 9vw;
+  padding: 0.4vw;
+  font-size: 1vw;
+}
+
+.logout-cancel-btn:hover,
+.logout-confirm-btn:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+
+}
+
+.logout-title{
+  color: black;
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.logo {
+  position: fixed;
+  left: 4.8vw;
+  top: 1.4vw;
+  animation: zoomOut 1s both;
+  animation-delay: 0.7s;
+  z-index: 1000;
+}
+
+
+@keyframes disappear {
+  0%{
+    width: 100%;
+    height: 100%;  
+    opacity: 1;
+  }
+  25%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100%{
+    width: 0;
+    height: 0; 
+    opacity: 0;
+ 
+  }
+}
+
+@keyframes zoomOut {
+  0%{
+    width: 40vw;
+    background-color: white;
+    width: 40vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  100%{
+    width: 10vw;  
+ 
+}
+}
+
+
+@keyframes zoomOutMobile {
+  0%{
+    width: 50vw;
+    background-color: white;
+    transform: translateY(300px) translateX(90px);
+  }
+  100%{
+    width: 20vw;
+  }
+}
+
+
+
+.mobile .link-to-report-maker {
+  margin: 3vw 0;
+}
+
+.mobile .next-btn-pink {
+  width: 8.5vw;
+}
+.mobile .end-of-buttons-section {
+left: 32vw;
+}
+
+.mobile .top-companies-nav {
+  left: 2.8vw;
+}
+
+.mobile .remove-all {
+  text-decoration: underline;
+  font-size: 3.9vw;
+  font-weight: bold;
+  top: 14vw;
+  position: fixed;
+  margin: 1vw;
+  right: 9vw;
+}
+
+.mobile .no-selected-button {
+  background-color: transparent;
+  width: 8.8vw;
+  height: 8.8vw;
+  border-radius: 100%;
+  outline: none;
+  color: #a2a1a1;
+  border: 2.8px solid #c8c8c8;
+  margin: 6.4vw 0;
+  font-size: 6.9vw;
+}
+
+.mobile .client-btn {
+  background-color: white;
+  color: black;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 31px;
+  height: 8.1vw;
+  margin: 0.7vw;
+  font-size: 16vw;
+  text-transform: uppercase;
+  padding: 1.5vw;
+  float: right;
+  line-height: 0;
+  position: relative;
+}
+
+.mobile .top-scroll {
+  height: 0.6vw;
+}
+
+.top-scroll {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 0.3vw;
+}
+
+.buttons::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+.client-btn {
+  background-color: white;
+  color: black;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 31px;
+  height: 2.8vw;
+  margin: 0.7vw;
+  text-transform: uppercase;
+  padding: 0.7vw;
+  float: right;
+  line-height: 0;
+  font-size: 16px;
+  font-family: 'Futura' !important;
+  position: relative;
+}
+
+.buttons {
+  float: right;
+  margin: 10px;
+  width: auto;
+  max-width: 60%;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.no-selected-img{
+  width: 52px;
+}
+
+.remove-all {
+  text-decoration: underline;
+  font-size: 17px;
+  margin: 4vw 0;
+  font-weight: normal;
+  position: relative;
+  margin: 1vw;
+}
+
+.remove-all:hover {
+  cursor: pointer;
+}
+
+.next-btn {
+  background-color: rgb(255 47 82);
+  border-radius: 100%;
+  outline: none;
+  border: none;
+  color: white;
+  width: 3vw;
+  height: 3vw;
+  font-size: 1vw;
+  margin: 1vw;
+}
+.next-btn:hover {
+  cursor: pointer;
+}
+
+.client-btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.client-btn:hover .remove-btn {
+  opacity: 1;
+}
+
+.link-to-report-maker {
+  margin: 1vw;
+}
+
+.remove-btn {
+  opacity: 0;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  outline: none;
+  border: 1px solid black;
+  height: 1vw;
+  width: 1vw;
+  font-size: 0.8vw;
+  right: 0.8vw;
+  bottom: 2vw;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-btn > span {
+  position: relative;
+  font-size: 0.7vw;
+}
+
+.remove-btn:hover {
+  background-color: #f84a72;
+  border: 1px solid #f84a72;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.25);
+  transition: 0.2s;
+}
+
+.inside-client-btn {
+  position: relative;
+}
+
+.start-of-buttons-section {
+  position: absolute;
+  height: 100%;
+  right: 1vw;
+  height: 3vw;
+  width: 8vw;
+  top: 1.4vw;
+}
+
+.end-of-buttons-section {
+  position: absolute;
+  height: 3vw;
+  width: 3vw;
+  top: 1.4vw;
+  width: 6vw;
+  left: 31.5vw;
+}
+
+.more-buttons-icon {
+  position: absolute;
+  left: 0;
+  font-weight: 300;
+  font-size: 4.5vw;
+  top: -1.5vw;
+}

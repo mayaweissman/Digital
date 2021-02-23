@@ -1,0 +1,48 @@
+.full-screen-link-conatiner {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 0;
+    right: 0;
+    z-index: 10000000;
+    background-color: #000000d7;
+    animation: fadeIn 1s both;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .small-link-conatiner {
+    background-color: white;
+    height: 206px;
+    max-height: 30%;
+    width: 701px;
+    max-width: 40%;
+    padding: 3vw;
+    text-align: center;
+  }
+
+.restore-btn{
+    width: 100px;
+    margin: 10px;
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    font-size: 18px;
+}
+
+.restore-btn:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+  

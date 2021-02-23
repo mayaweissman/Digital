@@ -1,0 +1,271 @@
+.all-clients {
+  display: block;
+  margin: auto;
+  padding-top: 6vw;
+  direction: ltr;
+  animation: slideInVaryLeft 1s both;
+  animation-delay: 0.6s;
+}
+
+@keyframes slideInVaryLeft {
+  0% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.no-clients-area{
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  align-items: center;
+}
+
+.add-btn-img:hover{
+  cursor: pointer;
+}
+
+.add-btn-img{
+  margin: 0 9px -4px 0;
+}
+
+.client {
+  display: inline-block;
+  margin: 0 1vw;
+  padding-bottom: 2vw;
+  direction: ltr;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: 'Futura' !important;
+  letter-spacing: 1px;
+}
+
+.mobile .client{
+  font-size: 4vw;
+}
+
+.mobile .filter-by-date-img {
+  width: 6vw;
+}
+
+.mobile .company-filter-pop-up-menu > span {
+  display: block;
+  font-size: 4.9vw;
+  margin: 2.8vw;
+}
+
+.mobile .company-filter-pop-up-menu {
+  width: 50vw;
+  top: 22.4vw;
+}
+
+.mobile .filter-area {
+  margin: 0;
+  margin-top: 20vw;
+  margin-bottom: 17vw;
+}
+
+.mobile .filter-by-company,
+.mobile .filter-by-name,
+.mobile .separate,
+.mobile .filter-by-new {
+  font-size: 4vw;
+}
+
+.mobile .client > img {
+  width: 42vw;
+  height: 30.5vw;
+  border-radius: 15px;
+  box-shadow: 0px 0px 9px -4px rgba(0, 0, 0, 0.75);
+}
+
+.mobile .MuiSvgIcon-root {
+  width: 5em;
+  height: 5em;
+}
+
+.add-inside-text {
+  position: relative;
+  bottom: 0.45vw;
+  font-size: 1.7vw;
+  right: 0.3vw;
+}
+
+.client-info {
+  display: flex;
+}
+
+.add-client-btn {
+  top: 0.4vw;
+  margin: 0 0.3vw;
+  position: relative;
+  width: 1.3vw;
+}
+
+.filter-by-name:hover,
+.filter-by-new:hover,
+.filter-by-date-img:hover,
+.add-client-btn:hover {
+  cursor: pointer;
+}
+
+.btn-before{
+  border: 2px solid black;
+  top: 0.2vw;
+  margin: 0 0.3vw;
+  position: relative;
+  width: 1.3vw;
+  height: 1.3vw;
+  display: inline-flex;
+  border-radius: 100%;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+}
+
+.mobile .btn-after,
+.mobile .btn-before {
+  width: 6.3vw;
+  height: 6.3vw;
+  margin-right: 2vw;
+}
+
+.loader{
+  position: relative;
+  width: 150px;
+  margin: auto;
+  display: flex;
+  top: 14vw;
+}
+
+.btn-after{
+  outline: none;
+  color: white;
+  border: 2px solid  #f84a72;
+  top: 0.2vw;
+  margin: 0 0.3vw;
+  position: relative;
+  width: 1.3vw;
+  height: 1.3vw;
+  display: inline-flex;
+  border-radius: 100%;
+  background-color:  #f84a72;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-before:hover{
+  cursor: pointer;
+  background-color:  #f84a72;
+  border: 2px solid  #f84a72;
+  color: white;
+}
+
+.filter-by-date-img {
+  width: 1vw;
+  position: relative;
+  bottom: 0.8vw;
+}
+.plus-icon{
+  position: relative;
+  font-size: 1.2vw !important;
+}
+
+.client > img {
+  width: 226px;
+  height: 150px;
+  border-radius: 15px;
+}
+
+.client > img:hover{
+  cursor: pointer;
+}
+
+.client > * {
+  display: block;
+}
+
+.filter-area {
+  position: relative;
+  top: 3vw;
+  display: flex;
+  width: 95.8%;
+  padding-bottom: 7vw;
+  text-transform: uppercase;
+}
+
+.company-filter-pop-up-menu {
+  width: 10vw;
+  height: auto;
+  background-color: white;
+  z-index: 999;
+  position: absolute;
+  top: 10.4vw;
+  right: 3vw;
+  display: block;
+  direction: rtl;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 4px solid black;
+}
+
+.company-name:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.company-filter-pop-up-menu > span {
+  display: block;
+  font-size: 0.9vw;
+  margin: 0.8vw;
+}
+
+.filter-by-company {
+  position: absolute;
+  right: 0;
+  font-size: 17px;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+.filter-by-company:hover{
+cursor: pointer;
+}
+
+.filter-by-name {
+  font-size: 17px;
+}
+
+.inside-filter {
+  font-size: 0.6vw;
+  margin: 0.3vw;
+}
+
+.filter-by-new {
+  font-size: 17px;
+  margin-left: 0.7vw;
+}
+
+.separate {
+  margin: 0 1vw;
+  bottom: 0.9vw;
+  font-size: 2vw;
+  position: relative;
+}
+
+.left-filter {
+  position: absolute;
+  left: 1.5vw;
+  display: flex;
+  direction: ltr;
+}
+
+.client-info{
+  margin-top: 0.4vw;
+}

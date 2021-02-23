@@ -1,0 +1,189 @@
+.campaigns {
+  margin-top: 6vw;
+  box-sizing: border-box;
+}
+
+.client-in-campaigns {
+  direction: rtl;
+
+  display: inline-block;
+  width: 100%;
+  overflow: visible;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.filter-icon {
+  display: none !important;
+}
+
+.loader {
+  width: 7vw;
+  position: fixed;
+  top: 50%;
+  left: 39%;
+}
+
+.grid {
+  column-count: 5;
+  column-gap: 0;
+}
+
+.no-clients {
+  position: fixed;
+  top: 10vw;
+  right: 23vw;
+  margin: auto;
+  width: 80%;
+}
+
+.no-clients > h1 {
+  position: relative;
+  display: flex;
+  direction: rtl;
+}
+
+.no-clients > a {
+  position: relative;
+  display: flex;
+  direction: rtl;
+  color: black;
+  font-size: 1vw;
+}
+
+.up-btn {
+  display: none;
+}
+
+.mobile .up-btn {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  transform: rotate(90deg);
+}
+
+.mobile .campaign-img {
+  width: 33vw;
+}
+
+.campaign-img:hover {
+  cursor: pointer;
+}
+
+.client-in-campaigns > h2 {
+  font-weight: bold;
+}
+
+.campaign {
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 1vw;
+}
+
+.mobile .grid {
+  column-count: 2;
+}
+
+.campaign-img {
+  width: 13vw;
+  height: auto;
+  border-radius: 15px;
+}
+
+.product-type-title {
+  font-size: 21px;
+  position: relative;
+  bottom: 0.5vw;
+}
+
+.campaign-info {
+  height: 2vw;
+  display: flex;
+  width: 13vw;
+  position: relative;
+}
+
+.success-color {
+  height: 1vw;
+  width: 1vw;
+  font-size: 1.8vw;
+  position: relative;
+  right: 2.6vw;
+  top: 0.4vw;
+}
+
+.success-rate {
+  position: absolute;
+  font-size: 1vw;
+  font-weight: bold;
+  left: 1.2vw;
+  opacity: 0;
+  bottom: 0.8vw;
+}
+
+.filter-icon {
+  display: none;
+}
+
+.mobile .filter-icon {
+  display: block;
+}
+
+.mobile .campaigns .MuiSvgIcon-root {
+  width: 5em;
+  height: 5em;
+  font-size: 1.5vw;
+  position: absolute;
+  left: 28vw;
+  bottom: 0.9vw;
+  color: black;
+}
+
+.campaigns-filter-by-low,
+.campaigns-filter-by-high:hover,
+.campaigns-filter-by-success-img:hover {
+  cursor: pointer;
+}
+
+.campaigns-left-filter {
+  position: absolute;
+  display: flex;
+  direction: ltr;
+  opacity: 0;
+  text-transform: uppercase;
+  top: 9vw;
+  left: 6vw;
+}
+
+.campaigns-filter-by-success-img {
+  width: 1vw;
+  position: relative;
+  bottom: 0.8vw;
+}
+
+.campaigns-filter-by-high {
+  font-size: 0.9vw;
+  font-weight: bold;
+  margin-left: 0.7vw;
+}
+
+.campaigns-separate {
+  margin: 0 1vw;
+  bottom: 0.9vw;
+  font-size: 2vw;
+  position: relative;
+}
+
+.campaigns-filter-by-low {
+  font-size: 0.9vw;
+  font-weight: bold;
+  color: gray;
+}

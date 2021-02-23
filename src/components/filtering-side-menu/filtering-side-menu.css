@@ -1,0 +1,383 @@
+
+.filtering-side-menu {
+  display: block;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  width: 14%;
+  right: 0;
+  top: 0;
+  color: white;
+  direction: rtl;
+  padding: 2vw;
+  animation: slideInRight 1s both;
+}
+
+
+.close-menu-icon{
+  display: none;
+}
+
+.mobile .close-menu-icon{
+  display: block;
+}
+
+.mobile .filtering-side-menu{
+  width: 100%;
+  padding: 10vw;
+  z-index: 1000;
+}
+
+.mobile .date-picker-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  width: 47%;
+  font-size: 5vw;
+  position: relative;
+  margin-top: 52px;
+  height: 9vw;
+  text-align: right;
+  line-height: 4vw;
+}
+
+.mobile .campaign-filtering-title {
+  font-size: 5vw;
+}
+
+.mobile .campaigns-filtering-area {
+  margin-top: 5vw;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.mobile .url-sharing-area {
+  height: 17vw;
+  font-size: 5vw;
+  bottom: 20vw;
+}
+
+.mobile .url-sharing-area > span {
+  position: relative;
+  left: 10vw;
+}
+
+
+.reset-filtering {
+  text-decoration: underline;
+  font-size: 15px;
+  float: right;
+}
+
+.reset-filtering:hover {
+  cursor: pointer;
+}
+
+.date-filtering-box {
+  background-color: black;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  margin-top: 3.5vw;
+}
+
+.products-titles,
+.campaigns-titles {
+  margin-top: 0.6vw;
+}
+
+.scrolling-area{
+height: 55%;
+margin-top: 4vw;
+overflow: auto;
+}
+
+.scrolling-area::-webkit-scrollbar {
+  width: 10px;
+  position: relative;
+  right: 1vw;
+}
+
+.scrolling-area::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+.scrolling-area::-webkit-scrollbar-thumb {
+  background: rgb(36, 35, 35);
+
+}
+.scrolling-area::-webkit-scrollbar-thumb:hover {
+  background: rgb(51, 51, 51);
+  transition: 0.2s;
+}
+
+
+.products-filtering-area {
+  margin-top: 2vw;
+}
+
+.campaign-filtering-title {
+  font-weight: bold;
+  padding-bottom: 1vw;
+  font-size: 1.1vw;
+}
+
+.products-filtering-title {
+  font-weight: bold;
+  padding-bottom: 1vw;
+  font-size: 1.1vw;
+}
+
+.campaign-name-title {
+  display: block;
+  padding: 0.1vw;
+  font-size: 1vw;
+  position: relative;
+  right: 1.6vw;
+  bottom: 0.2vw;
+}
+
+br {
+  margin: 0;
+  padding: 0;
+}
+
+.url-sharing-area {
+  background-color: #f84a72;
+  width: 100%;
+  padding: 0 !important;
+  position: absolute;
+  right: 0;
+  bottom: 4vw;
+  height: 3vw;
+  text-align: center;
+  line-height: 3vw;
+  color: white;
+  font-weight: bold;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.1vw;
+  border: 1px solid #f84a72;
+}
+
+.url-sharing-area:disabled{
+  background-color: #fd7292;
+}
+
+.url-sharing-area:disabled:hover{
+  cursor: not-allowed;
+}
+
+.url-sharing-area:hover {
+  cursor: pointer;
+}
+
+.container-for-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mobile .campaign-name-title {
+  font-size: 4vw;
+  right: 7.6vw;
+}
+
+.mobile .checkmark {
+  height: 4vw;
+  width: 4vw;
+}
+
+/* Hide the browser's default checkbox */
+.container-for-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  height: 0.9vw;
+  width: 0.9vw;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.container-for-check:hover input ~ .checkmark {
+  background-color: transparent;
+  border: 1px solid #f84a72;
+}
+
+.container-for-check input:checked ~ .checkmark {
+  background-color: transparent;
+  border: 1px solid #f84a72;
+}
+
+.mobile .filtering-side-menu .close-menu-icon .MuiSvgIcon-root {
+  width: 9vw;
+  height: 9vw;
+  font-size: 1.5vw;
+  position: fixed;
+  top: 6vw;
+  left: 25vw;
+  color: white;
+}
+
+
+.mobile .container-for-check .checkmark:after {
+  top: -1.9vw;
+  width: 2.1vw;
+  height: 3.9vw;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+}
+
+.mobile .reset-filtering {
+  font-size: 5vw;
+}
+
+.mobile .products-filtering-title {
+  font-weight: bold;
+  padding-bottom: 1vw;
+  font-size: 5vw;
+}
+
+.mobile .container-for-check input {
+  height: 4vw;
+  width: 4vw;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-for-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-for-check .checkmark:after {
+  top: -0.3vw;
+  width: 0.4vw;
+  height: 0.8vw;
+  border: solid white;
+  border-width: 0 1.8px 1.8px 0;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.daterangepicker{
+  background-color: white !important;
+}
+.calendar-table{
+  background-color: white !important;
+  color: black !important;
+}
+
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+  background-color: #f84a72 !important;
+  border-color: white !important;
+}
+
+.daterangepicker .drp-selected{
+  color: rgb(0, 0, 0) !important;
+}
+
+.daterangepicker .drp-buttons .btn{
+  color: black !important;
+  background-color: #ffffff !important;
+  border: 1px solid #000000 !important;
+  width: 80px;
+  outline: none;
+
+}
+
+.daterangepicker:hover .drp-buttons:hover .btn:hover{
+  background-color: #000000 !important;
+  border: 1px solid #000000 !important;
+  color: white !important;
+  cursor: pointer;
+
+}
+
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date{
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(175, 175, 175) !important;
+}
+
+
+.daterangepicker td.in-range{
+background-color: #ffd2dc !important;
+}
+
+.calendar-table > .off{
+  background-color: rgb(255, 255, 255) !important;
+  color: black !important;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+background-color: #f84a72 !important;
+}
+.dates-range-err{
+  color: #f14646;
+  font-size: 13px;
+}
+
+.date-picker-btn{
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  width: 90%;
+  font-size: 1vw;
+  position: relative;
+  margin-top: 52px;
+  height: 3vw;
+  text-align: right;
+  line-height: 4.4vw;
+}
+
+.date-range-icon{
+  position: absolute;
+  direction: ltr;
+  left: 0;
+  line-height: 5vw;
+}
+
+.history-field{
+  color: white;
+  display: flex;
+}
+
+.history-title{
+  color:  white !important;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.history-field:hover{
+  cursor: pointer;
+}
+
+.history-field > .MuiIconButton-root{
+  padding: 0 !important;
+}

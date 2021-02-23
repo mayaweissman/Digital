@@ -1,0 +1,109 @@
+.full-screen-link-conatiner {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  top: 0;
+  right: 0;
+  z-index: 10000000;
+  background-color: #000000d7;
+  animation: fadeIn 1s both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.small-reports-conatiner {
+  background-color: white;
+  height: 476px;
+  max-height: 80%;
+  position: relative;
+  width: 740px;
+  max-width: 80%;
+  padding: 3vw;
+  text-align: center;
+}
+
+.small-reports-conatiner .MuiIconButton-root {
+  padding: 12px;
+  position: relative;
+  left: 6px;
+}
+
+.small-reports-conatiner > table {
+  width: 100%;
+  direction: rtl;
+  text-align: right;
+  border-collapse: collapse;
+  overflow: auto;
+  max-height: 80%;
+  display: inline-block;
+  table-layout: fixed;
+  position: relative;
+}
+
+.small-reports-conatiner > table > tbody > tr > td:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.name-th,
+.dates-th {
+  width: 45%;
+}
+
+.dates-th > .MuiSvgIcon-root,
+.name-th > .MuiSvgIcon-root {
+  position: relative;
+  top: 7px;
+}
+
+.dates-th:hover,
+.name-th:hover {
+  cursor: pointer;
+}
+
+.watch-th,
+.link-th {
+  width: 15%;
+}
+
+.small-reports-conatiner > table > thead {
+  background: white;
+  border: none;
+  position: sticky;
+  top: 0;
+  border-bottom: 3px solid black;
+}
+
+.close-reports-pop-up-btn {
+  width: 1.9vw;
+  z-index: 100000;
+  height: 1.9vw;
+  margin: 1vw;
+  position: absolute;
+  left: 1vw;
+  top: 1vw;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  outline: none;
+  border: 2px solid black;
+}
+
+.close-reports-pop-up-btn:hover {
+  cursor: pointer;
+  background-color: #f84a72;
+  border: 2px solid #f84a72;
+  color: white;
+}

@@ -1,0 +1,189 @@
+.full-screen-conatiner {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  top: 0;
+  right: 0;
+  z-index: 10000000;
+  background-color: #000000d7;
+  animation: fadeIn 1s both;
+}
+
+@keyframes fadeIn {
+
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.small-conatiner {
+  background-color: white;
+  height: 706px;
+  max-height: 85%;
+  width: 1611px;
+  max-width: 85%;
+  padding: 3vw;
+  position: relative;
+}
+
+.close-pop-up-btn {
+  width: 1.9vw;
+  height: 1.9vw;
+  margin: 1vw;
+  position: absolute;
+  left: 1vw;
+  top: 1vw;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  outline: none;
+  border: 2px solid black;
+}
+
+.close-pop-up-btn:hover {
+  cursor: pointer;
+  background-color:  #f84a72;
+  border: 2px solid  #f84a72;
+  color: white;
+}
+
+.client-in-pop-up {
+  width: 100%;
+  display: inline-block !important;
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.pop-up-btn:disabled {
+  border: 2px solid lightgray;
+  color: gray;
+}
+
+.pop-up-btn:disabled:hover {
+  cursor: no-drop;
+  border: 2px solid lightgray;
+  background-color: white;
+  color: gray;
+}
+
+.clients-in-pop-up {
+  margin: 2vw 4vw;
+  max-height: 80%;
+  overflow: auto;
+  border: none;
+  border-bottom: 5px solid black;
+}
+
+.clients-in-pop-up::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.company {
+  margin-top: 2vw;
+}
+
+.mobile .pop-up-btn {
+  background-color: white;
+  border: 2px solid black;
+  margin: 1.2vw;
+  height: 7vw;
+  border-radius: 21px;
+  font-size: 4.9vw;
+  text-transform: uppercase;
+  padding: 4.3vw;
+  line-height: 0.3vw;
+  outline: none;
+}
+
+.pop-up-btn {
+  background-color: white;
+  border: 2px solid black;
+  margin: 0.5vw;
+  height: 2vw;
+  border-radius: 21px;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  padding: 0.8vw;
+  line-height: 0.3vw;
+  outline: none;
+}
+
+.pop-up-btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.add-client-in-pop-up {
+  background-color: #f84a72;
+  border: 1px solid #f84a72;
+  width: 10vw;
+  height: 2.9vw;
+  position: absolute;
+  right: 50%;
+  font-size: 1vw;
+  transform: translateX(50%);
+  color: white;
+  font-weight: bold;
+}
+
+.add-client-in-pop-up:hover {
+  cursor: pointer;
+}
+
+.mobile .close-pop-up-btn .MuiSvgIcon-root {
+  width: 1.3em;
+  height: 2em;
+}
+
+.mobile .close-pop-up-btn {
+  width: 11vw;
+  height: 11vw;
+  margin: 1vw;
+  position: absolute;
+  left: 6vw;
+  top: 9vw;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  outline: none;
+  border: 2px solid black;
+}
+
+.mobile .company-name {
+  font-weight: bold;
+  font-size: 5.5vw;
+  margin:  2vw;
+}
+
+.add-client-in-pop-up:disabled {
+  background-color: #fca5b9;
+  border: 1px solid #fca5b9;
+}
+
+.mobile .add-client-in-pop-up {
+  background-color: #f84a72;
+  width: 82vw;
+  height: 12vw;
+  position: absolute;
+  right: 50%;
+  font-size: 7.5vw;
+  transform: translateX(50%);
+  color: white;
+  font-weight: 500;
+  bottom: 14vw;
+}

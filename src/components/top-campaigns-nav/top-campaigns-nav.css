@@ -1,0 +1,305 @@
+.top-campaigns-nav {
+  height: 7vw;
+  position: fixed;
+  margin: 0;
+  width: 72%;
+  display: flex;
+  direction: rtl;
+  z-index: 999;
+  background-color: white;
+  left: 5.5vw;
+  align-items: center;
+  animation: slideDown 0.6s both;
+}
+
+
+@keyframes slideDown {
+  0%{
+    top: -50px;
+  }
+  25%{
+    top: -20px;
+  }
+  100%{
+    top: 0;
+  }
+}
+
+.mobile .campaigns-top-scroll {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 0.7vw;
+}
+
+
+.mobile .top-campaigns-nav {
+  height: 15vw;
+  position: fixed;
+  margin: 0;
+  width: 90%;
+  display: flex;
+  direction: rtl;
+  z-index: 999;
+  background-color: white;
+  left: 5.5vw;
+  animation: slideDown 0.6s both;
+}
+
+.mobile .campaigns-filter-by-high {
+  font-size: 3vw;
+  font-weight: 500;
+  margin-left: 2vw;
+}
+
+.mobile .campaigns-separate {
+  margin: 0 1vw;
+  bottom: 0.9vw;
+  font-size: 4vw;
+  position: relative;
+}
+
+.mobile .campaigns-filter-by-low {
+  font-size: 3vw;
+  font-weight: 500;
+  color: gray;
+}
+
+.mobile .campaigns-left-filter {
+  position: absolute;
+  display: flex;
+  direction: ltr;
+  text-transform: uppercase;
+  top: 20vw;
+  left: 6vw;
+}
+
+.mobile .campaigns-filter-by-success-img {
+  width: 5vw;
+  position: relative;
+  bottom: 0.8vw;
+}
+
+.mobile .campaigns {
+  margin-top: 28vw;
+  box-sizing: border-box;
+}
+
+.mobile .add-client-span {
+  text-decoration: underline;
+  font-size: 3vw;
+  margin: 4vw 0;
+  font-weight: bold;
+}
+
+.mobile .campaigns-client-btn {
+  background-color: white;
+  color: black;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 31px;
+  height: 6.8vw;
+  margin: 0.7vw;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 1.3vw;
+  float: right;
+  line-height: 0;
+  position: relative;
+}
+
+.mobile .campaigns-logo {
+  position: absolute;
+  left: 0;
+  top: 2.4vw;
+  width: 25vw;
+}
+
+
+.no-selected-button {
+  background-color: transparent;
+  width: 3.8vw;
+  height: 3.8vw;
+  border-radius: 100%;
+  outline: none;
+  color: #a2a1a1;
+  border: 2.8px solid #c8c8c8;
+  margin: 1vw;
+  font-size: 2.3vw;
+}
+
+.campaigns-logo {
+  position: absolute;
+  left: 0;
+  top: 1.4vw;
+  width: 10vw;
+}
+
+.campaigns-top-scroll {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 0.3vw;
+}
+
+.campaigns-buttons::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.campaigns-inside-client-btn:hover{
+  color: white;
+}
+.back-to-home-page{
+  text-decoration: none;
+  color: black;
+}
+
+.back-to-home-page:hover{
+  color: white;
+}
+
+.campaigns-client-btn {
+  background-color: white;
+  color: black;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 31px;
+  height: 2.8vw;
+  margin: 0.7vw;
+  text-transform: uppercase;
+  padding: 0.7vw;
+  float: right;
+  line-height: 0;
+  font-size: 16px;
+  font-family: 'Futura' !important;
+  position: relative;
+}
+
+
+.campaigns-buttons {
+  float: right;
+  margin: 10px;
+  width: auto;
+  max-width: 70%;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.add-client-span {
+  text-decoration: underline;
+  font-size: 17px;
+  margin: 2vw 0;
+}
+
+.logout-span{
+      font-size: 1vw;
+      margin: 2vw 0;
+      position: absolute;
+      left: 0;
+      top: 3vw;
+      text-transform: uppercase;
+}
+
+.logout-span:hover{
+     cursor: pointer;
+     font-weight: bold;
+     transition: all .4s ease;
+    }
+
+.add-client-span:hover {
+  cursor: pointer;
+}
+
+
+.next-btn {
+  background-color: rgb(255 47 82);
+  border-radius: 100%;
+  outline: none;
+  border: none;
+  color: white;
+  width: 3vw;
+  height: 3vw;
+  font-size: 1vw;
+  margin: 1vw;
+}
+.next-btn:hover {
+  cursor: pointer;
+}
+
+.campaigns-client-btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.campaigns-client-btn:hover .campaigns-remove-btn {
+  opacity: 1;
+}
+
+.link-to-report-maker {
+  margin: 1vw;
+}
+
+.campaigns-remove-btn {
+  opacity: 0;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  outline: none;
+  border: 1px solid black;
+  height: 1vw;
+  width: 1vw;
+  font-size: 0.8vw;
+  right: 0.8vw;
+  bottom: 2vw;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.campaigns-remove-btn > span {
+  position: relative;
+  font-size: 0.7vw;
+}
+
+.campaigns-remove-btn:hover {
+  background-color: #f84a72;
+  border: 1px solid #f84a72;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.25);
+  transition: 0.2s;
+}
+
+.campaigns-inside-client-btn {
+  position: relative;
+}
+
+.campaigns-start-of-buttons-section {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  height: 3vw;
+  width: 7vw;
+  top: 1.4vw;
+}
+
+.campaigns-end-of-buttons-section {
+  position: absolute;
+  height: 4vw;
+  width: 3vw;
+  top: 1.4vw;
+  width: 2vw;
+  left: 20.4vw;
+}
+
+.campaigns-more-buttons-icon {
+  position: absolute;
+  left: 0;
+  font-weight: 300;
+  font-size: 4.5vw;
+  top: -1.5vw;
+}
