@@ -220,7 +220,7 @@ export class TopCampaignsNav extends Component<TopCampaignsNavProps, TopCampaign
                 <div className="campaigns-top-scroll" style={{ top: this.props.isScroll ? this.topNavRef.current?.clientHeight : 0 }}></div>
 
                 <NavLink to="/home">
-                    <img className="campaigns-logo" src="./assets/images/logo_factory.svg" />
+                    <img className="campaigns-logo" src="./assets/images/logo_mccann.svg" />
                 </NavLink>
 
                 {this.state.display &&

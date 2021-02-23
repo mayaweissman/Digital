@@ -173,7 +173,7 @@ export class TopReportNav extends Component<TopReportNavProps, TopReportNavState
 
                 <div className="campaigns-top-scroll" style={{ top: this.props.isScroll ? "7vw" : 0 }}></div>
 
-                <img className="campaigns-logo" src="./assets/images/logo_factory.svg" />
+                <img className="campaigns-logo" src="./assets/images/logo_mccann.svg" />
 
                 {this.state.display &&
                     <AddClientPopUp />

@@ -153,7 +153,7 @@ export class AuthForWatchingOnly extends Component<any, AuthForWatchingOnlyState
 
         <div className="auth-box">
 
-          <img className="auth-logo" src="/assets/images/logo_factory.svg" />
+          <img className="auth-logo" src="/assets/images/logo_mccann.svg" />
 
           <div className="auth-titles">
             <h1>מערכת תוצר</h1>

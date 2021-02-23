@@ -158,7 +158,7 @@ export class Auth extends Component<any, AuthState> {
 
         <div className="auth-box">
 
-          <img className="auth-logo" src="/assets/images/logo_factory.svg" />
+          <img className="auth-logo" src="/assets/images/logo_mccann.svg" />
 
           <div className="auth-titles">
             <h1>מערכת תוצר</h1>

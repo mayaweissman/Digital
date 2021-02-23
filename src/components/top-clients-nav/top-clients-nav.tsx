@@ -133,7 +133,7 @@ export class TopClientsNav extends Component<TopClientsNavProps, TopClientsNavSt
                 <span className="logout-span" onClick={() => this.setState({ showLogout: true })}>logout</span>
 
                 <div className="logo-container"></div>
-                <img className="logo" src="./assets/images/logo_factory.svg" />
+                <img className="logo" src="./assets/images/logo_mccann.svg" />
 
                 {this.state.showLogout &&
                     <div className="logout-dialog" >
