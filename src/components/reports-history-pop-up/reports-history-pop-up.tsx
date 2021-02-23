@@ -45,7 +45,7 @@ export class ReportsHistoryPopUp extends Component<any, ReportsHistoryPopUpState
     public async componentDidMount() {
         try {
             const user = store.getState().user;
-            const response = await axios.get("http://factory-dev.landing-page-media.co.il/reports-by-user/?userId=" + user.userId);
+            const response = await axios.get("http://digital-dev.landing-page-media.co.il/reports-by-user/?userId=" + user.userId);
             const reportsStr = response.data;
             if (typeof (reportsStr) === 'object') {
                 const reports: ReportModel[] = [];
@@ -88,7 +88,7 @@ export class ReportsHistoryPopUp extends Component<any, ReportsHistoryPopUpState
         store.dispatch({ type: ActionType.getSelectedProducts, payLoad: report.products });
         store.dispatch({ type: ActionType.getDatesRanges, payLoad: report.datesOnReport });
 
-        const response = await axios.get("http://factory-dev.landing-page-media.co.il/all-campaigns/");
+        const response = await axios.get("http://digital-dev.landing-page-media.co.il/all-campaigns/");
         const allCampaigns: CampaignModel[] = response.data.campaigns;
 
         if (report.campaigns?.length === 0) {
@@ -105,7 +105,7 @@ export class ReportsHistoryPopUp extends Component<any, ReportsHistoryPopUpState
 
 
         if (report.products?.length === 0) {
-            const responseForProducts = await axios.get("http://factory-dev.landing-page-media.co.il/all-products");
+            const responseForProducts = await axios.get("http://digital-dev.landing-page-media.co.il/all-products");
             const allProductsFromDb: ProductModel[] = responseForProducts.data.products;
             const selectedCampaigns: CampaignModel[] = store.getState().selectedCampaigns;
 

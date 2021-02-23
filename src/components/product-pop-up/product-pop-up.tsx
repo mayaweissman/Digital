@@ -64,7 +64,7 @@ export class ProductPopUp extends Component<ProductPopUpProps, ProductPopUpState
             }
 
 
-            const response = await axios.get("http://factory-dev.landing-page-media.co.il/all-products-types/");
+            const response = await axios.get("http://digital-dev.landing-page-media.co.il/all-products-types/");
             const productsTypes: ProductsType[] = response.data.productsTypes;
             const productTypes = productsTypes.find(t => t.productsTypeId === this.props.product.productTypeId);
             this.setState({ productsType: productTypes as ProductsType });
