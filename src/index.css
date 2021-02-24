@@ -1,18 +1,18 @@
 @font-face {
   font-family: "AlmoniLight";
-  src: url("http://localhost:3000/assets/fonts/almoni-dl-aaa-light.woff");
+  src: url("http://digital.mccann.co.il/assets/fonts/almoni-dl-aaa-light.woff");
 }
 @font-face {
   font-family: "AlmoniNormal";
-  src: url("http://localhost:3000/assets/fonts/almoni-neue-regular-aaa.woff");
+  src: url("http://digital.mccann.co.il/assets/fonts/almoni-neue-regular-aaa.woff");
 }
 @font-face {
   font-family: "FuturaMedium";
-  src: url("http://localhost:3000/assets/fonts/futuraMediumBT.woff");
+  src: url("http://digital.mccann.co.il/assets/fonts/futuraMediumBT.woff");
 }
 @font-face {
   font-family: "Futura";
-  src: url("http://localhost:3000/assets/fonts/FuturaStdMedium.woff");
+  src: url("http://digital.mccann.co.il/assets/fonts/FuturaStdMedium.woff");
 }
 
 body,

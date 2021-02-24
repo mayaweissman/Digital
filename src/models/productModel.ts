@@ -5,6 +5,7 @@ export class ProductModel {
     public clientId?: number,
     public productTypeId?: number,
     public successRates?: number,
+    public bucket?: string,
     public images?: {
       img1?: string,
       img2?: string,

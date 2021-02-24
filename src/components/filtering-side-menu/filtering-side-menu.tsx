@@ -37,7 +37,8 @@ interface FilteringSideMenuState {
     allProducts: ProductModel[],
     productsTypes: ProductsType[],
     productsTypesToDisplay: ProductsType[],
-    showDatesError: boolean
+    showDatesError: boolean,
+    buckets: string[]
 }
 
 export class FilteringSideMenu extends Component<FilteringSideMenuProps, FilteringSideMenuState>{
@@ -56,7 +57,8 @@ export class FilteringSideMenu extends Component<FilteringSideMenuProps, Filteri
             allProducts: [],
             productsTypes: [],
             datesRange: store.getState().datesRange,
-            showDatesError: false
+            showDatesError: false,
+            buckets: []
         }
 
         this.unsubscribeStore = store.subscribe(() => {
@@ -109,6 +111,24 @@ export class FilteringSideMenu extends Component<FilteringSideMenuProps, Filteri
                 const allProducts: ProductModel[] = responseForProducts.data.products;
                 this.setState({ allProducts });
 
+                const allBuckets: string[] = [];
+                allProducts.map(p => allBuckets.push(p.bucket as string));
+                const uniqueBuckets: string[] = [];
+                uniqueBuckets.push(allBuckets[0]);
+
+                allBuckets.map(b => {
+                    let isUnique = true;
+                    uniqueBuckets.map(u => {
+                        if (u === b) {
+                            isUnique = false;
+                        }
+                    })
+                    if (isUnique) {
+                        uniqueBuckets.push(b);
+                    }
+                });
+
+                this.setState({buckets: uniqueBuckets});
             }, 2100);
         }
         catch (err) {
@@ -152,13 +172,27 @@ export class FilteringSideMenu extends Component<FilteringSideMenuProps, Filteri
             productsToDisplay.splice(index, 1);
         }
 
-
-
         if (duplictes.length === 0) {
             this.state.allProducts.filter(p => p.productTypeId === productsTypeId).
                 forEach(p => productsToDisplay.push(p));
         }
+        store.dispatch({ type: ActionType.updateProductsToDisplay, payLoad: productsToDisplay });
 
+    }
+
+    //Display only products who match bucket by filtering menu 
+    public filterByBucket = (bucket: string) => (event: any) => {
+        const productsToDisplay: ProductModel[] = [...store.getState().productsToDisplay];
+        const duplictes = productsToDisplay.filter(p => p.bucket === bucket);
+        for (const p of duplictes) {
+            const index = productsToDisplay.indexOf(p);
+            productsToDisplay.splice(index, 1);
+        }
+
+        if (duplictes.length === 0) {
+            this.state.allProducts.filter(p => p.bucket === bucket).
+                forEach(p => productsToDisplay.push(p));
+        }
         store.dispatch({ type: ActionType.updateProductsToDisplay, payLoad: productsToDisplay });
 
     }
@@ -178,6 +212,16 @@ export class FilteringSideMenu extends Component<FilteringSideMenuProps, Filteri
     public isProductTypeChecked = (productTypeId: number) => {
         const products: ProductModel[] = [...this.state.productsToDisplay];
         const p = products.find(product => product.productTypeId === productTypeId);
+        if (p !== undefined) {
+            return true;
+        }
+        return false;
+    }
+
+    //Checked/unchecked bucket who choosen on any time
+    public isBucketChecked = (bucket: string) => {
+        const products: ProductModel[] = [...this.state.productsToDisplay];
+        const p = products.find(product => product.bucket === bucket);
         if (p !== undefined) {
             return true;
         }
@@ -269,7 +313,7 @@ export class FilteringSideMenu extends Component<FilteringSideMenuProps, Filteri
                 <span className="reset-filtering" onClick={this.resetFiltering}>איפוס סננים</span>
                 <br />
                 <DateRangePicker
-                    onApply={this.filterByDatesRange} 
+                    onApply={this.filterByDatesRange}
                     initialSettings={{ showDropdowns: true }}
                 >
                     <button className="date-picker-btn"
@@ -325,6 +369,24 @@ export class FilteringSideMenu extends Component<FilteringSideMenuProps, Filteri
                             )}
                         </div>
                     </div>
+
+                    <div className="products-filtering-area">
+                        <span className="products-filtering-title">Bucket</span>
+                        <br />
+                        <div className="products-titles">
+
+                            {this.state.buckets.map(b =>
+                                <label className="container-for-check">
+                                    <input checked={this.isBucketChecked(b as string)} type="checkbox" onClick={this.filterByBucket(b as string)} />
+                                    <span className="checkmark"></span>
+                                    <span className="campaign-name-title">
+                                        {b}
+                                    </span>
+                                </label>
+                            )}
+                        </div>
+                    </div>
+
                 </div>
 
                 {!this.props.isOnReport &&
