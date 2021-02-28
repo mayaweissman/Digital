@@ -2,12 +2,12 @@
   height: 7vw;
   position: fixed;
   margin: 0;
-  width: 88%;
+  width: 89%;
   display: flex;
   direction: rtl;
   z-index: 999;
   background-color: white;
-  left: 4.8vw;
+  left: 3.8vw;
   align-items: center;
   animation: slideDown 0.6s both;
   animation-delay: 0.6s;
@@ -106,7 +106,7 @@
 
 .logo {
   position: fixed;
-  left: 4.8vw;
+  left: 3.8vw;
   top: 1.4vw;
   animation: zoomOut 1s both;
   animation-delay: 0.7s;
@@ -248,10 +248,14 @@ left: 32vw;
   text-transform: uppercase;
   padding: 0.7vw;
   float: right;
-  line-height: 0;
+  display: flex;
+  justify-content: center;
+  /* line-height: 0; */
+  justify-content: flex-start;
   font-size: 16px;
   font-family: 'Futura' !important;
   position: relative;
+  align-items: center;
 }
 
 .buttons {
