@@ -36,7 +36,7 @@ export class AddClientPopUp extends Component<any, AddClientPopUpState>{
 
     async componentDidMount() {
         try {
-            const reponse = await axios.get("http://digital-dev.landing-page-media.co.il/all-clients/");
+            const reponse = await axios.get("https://digital-dev.landing-page-media.co.il/all-clients/");
             const allClients:ClientModel[] = reponse.data.clients;
             this.setState({ allClients });
 
@@ -93,7 +93,7 @@ export class AddClientPopUp extends Component<any, AddClientPopUpState>{
             store.dispatch({ type: ActionType.updateSelectedClients, payLoad: selectedClients });
             store.dispatch({ type: ActionType.updateClientsToDisplay, payLoad: [] });
 
-            const response = await axios.get("http://digital-dev.landing-page-media.co.il/all-campaigns/");
+            const response = await axios.get("https://digital-dev.landing-page-media.co.il/all-campaigns/");
             const allCampaignsInDb:CampaignModel[] = response.data.campaigns;
 
             const selectedCampaigns: CampaignModel[] = store.getState().selectedCampaigns;
@@ -105,7 +105,7 @@ export class AddClientPopUp extends Component<any, AddClientPopUpState>{
                 })
             })
 
-            const allProductsResponse = await axios.get("http://digital-dev.landing-page-media.co.il/all-products");
+            const allProductsResponse = await axios.get("https://digital-dev.landing-page-media.co.il/all-products");
             const allProducts: ProductModel[] = allProductsResponse.data.products;
     
             store.dispatch({ type: ActionType.getSelectedCampaigns, payLoad: selectedCampaigns });

@@ -48,7 +48,7 @@ export class AuthForWatchingOnly extends Component<any, AuthForWatchingOnlyState
 
   public async componentDidMount() {
     try {
-      const response = await axios.get("http://digital-dev.landing-page-media.co.il/all-users/");
+      const response = await axios.get("https://digital-dev.landing-page-media.co.il/all-users/");
       const allUsers: UserModel[] = response.data.users;
       this.setState({ allUsers });
 

@@ -43,7 +43,7 @@ export class AllClients extends Component<any, AllClientsState>{
 
     async componentDidMount() {
         try {
-            const response = await axios.get("http://digital-dev.landing-page-media.co.il/all-clients/");
+            const response = await axios.get("https://digital-dev.landing-page-media.co.il/all-clients/");
             const allClients: ClientModel[] = response.data.clients;
             this.setState({ allClients });
             this.setState({ clientsToShow: allClients });

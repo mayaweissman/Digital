@@ -49,7 +49,7 @@ export class Report extends Component<any, ReportState>{
     public async componentDidMount() {
         try {
             const uuid = this.props.match.params.uuid;
-            const response = await axios.get("http://digital-dev.landing-page-media.co.il/all-reports/?uuid=" + uuid);
+            const response = await axios.get("https://digital-dev.landing-page-media.co.il/all-reports/?uuid=" + uuid);
             const report: ReportModel = response.data;
             if (!report) {
                 this.props.history.push("/page-not-found");

@@ -115,7 +115,7 @@ export class LinkPopUp extends Component<any, LinkPopUpState>{
             formData.append("state", JSON.stringify(report));
             formData.append("userId", id);
             formData.append("uuid", uuid);
-            await axios.post("http://digital-dev.landing-page-media.co.il/create-report/", formData);
+            await axios.post("https://digital-dev.landing-page-media.co.il/create-report/", formData);
 
             this.setState({ isReportCreated: true });
             this.setState({report});
